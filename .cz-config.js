@@ -1,6 +1,6 @@
 module.exports = {
   types: [
-    { value: 'feat', name: 'feat:  增加新功能' },
+    { value: 'feat', name: 'feat:     增加新功能(feature)' },
     { value: 'bug', name: 'bug:      测试反馈bug列表中的bug号' },
     { value: 'fix', name: 'fix:      修复bug' },
     { value: 'ui', name: 'ui:       更新UI' },
@@ -21,6 +21,7 @@ module.exports = {
     { value: 'revert', name: 'revert:   回退' },
     { value: 'build', name: 'build:    打包' },
   ],
+  scopes: [{ name: 'accounts' }],
   // override the messages, defaults are as follows
   messages: {
     type: '请选择提交类型:',
