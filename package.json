@@ -11,7 +11,7 @@
     "report": "cross-env REPORT=true npm run build",
     "preview": "npm run build && vite preview --host",
     "type:check": "vue-tsc --noEmit --skipLibCheck",
-    "commit":"git-cz",
+    "commit": "git-cz",
     "lint-staged": "npx lint-staged",
     "prepare": "husky install"
   },
@@ -19,7 +19,12 @@
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
-},
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "prettier --write",
